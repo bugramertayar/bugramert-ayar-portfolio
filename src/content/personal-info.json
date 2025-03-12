@@ -69,6 +69,33 @@
       ],
       "skills": ["Angular", "React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "SCSS", "Node.js", "Tailwind CSS", "JQuery", "Agile(Scrum)"]
     },
+    "playground": {
+      "projects": [
+        {
+          "title": "WordMaster",
+          "description": "A challenging word guessing game inspired by Wordle.",
+          "href": "/playground/games/wordmaster",
+          "category": "games",
+          "isComingSoon": false,
+          "content": {
+            "title": "WordMaster",
+            "description": "Test your vocabulary and deduction skills with WordMaster! Try to guess the hidden word in 5 attempts. After each guess, the color of the tiles will change to show how close your guess was to the word.",
+            "rules": ["You have 5 tries to guess the word", "Each guess must be a valid 5-letter word", "Colors will show how close your guess was", "Green: Letter is correct and in right spot", "Yellow: Letter is in the word but wrong spot", "Gray: Letter is not in the word"],
+            "settings": {
+              "wordLength": 5,
+              "maxAttempts": 5
+            }
+          }
+        },
+        {
+          "title": "TicTacToe",
+          "description": "Classic XOX game with a modern twist. Challenge your friends or play against AI.",
+          "href": "/playground/games/tictactoe",
+          "category": "games",
+          "isComingSoon": true
+        }
+      ]
+    },
     "contact": {
       "headline": "Let's Work Together",
       "description": "Feel free to reach out if you're looking for a developer, have a question, or just want to connect.",
