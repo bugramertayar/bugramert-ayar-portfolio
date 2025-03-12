@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getPersonalInfo } from '@/lib/personal-info';
 
-export function Hero() {
+export function Home() {
   const {
     shared,
     pages: { home }
