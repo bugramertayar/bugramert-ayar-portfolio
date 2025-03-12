@@ -2,19 +2,17 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight, Clock, GamepadIcon } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
   description: string;
   href: string;
-  icon?: string;
   isComingSoon?: boolean;
   category: string;
 }
 
-export function ProjectCard({ title, description, href, icon, isComingSoon, category }: ProjectCardProps) {
+export function ProjectCard({ title, description, href, isComingSoon, category }: ProjectCardProps) {
   return (
     <Link href={isComingSoon ? '#' : href} className={`block ${isComingSoon ? 'cursor-not-allowed' : ''}`}>
       <motion.div

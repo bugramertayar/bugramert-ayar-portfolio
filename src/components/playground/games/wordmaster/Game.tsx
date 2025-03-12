@@ -30,24 +30,6 @@ export function Game() {
     setTargetWord(randomWord);
   }, []);
 
-  // Handle keyboard input
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (gameStatus !== 'playing') return;
-
-      if (e.key === 'Enter' && currentGuess.length === WORD_LENGTH) {
-        submitGuess();
-      } else if (e.key === 'Backspace') {
-        setCurrentGuess((prev) => prev.slice(0, -1));
-      } else if (currentGuess.length < WORD_LENGTH && /^[A-Za-z]$/.test(e.key)) {
-        setCurrentGuess((prev) => (prev + e.key).toUpperCase());
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentGuess, gameStatus]);
-
   // Check guess and update game state
   const submitGuess = useCallback(() => {
     if (currentGuess.length !== WORD_LENGTH) return;
@@ -68,6 +50,24 @@ export function Game() {
       toast.error(`Game Over! The word was ${targetWord}`);
     }
   }, [currentGuess, guesses, targetWord]);
+
+  // Handle keyboard input
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (gameStatus !== 'playing') return;
+
+      if (e.key === 'Enter' && currentGuess.length === WORD_LENGTH) {
+        submitGuess();
+      } else if (e.key === 'Backspace') {
+        setCurrentGuess((prev) => prev.slice(0, -1));
+      } else if (currentGuess.length < WORD_LENGTH && /^[A-Za-z]$/.test(e.key)) {
+        setCurrentGuess((prev) => (prev + e.key).toUpperCase());
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentGuess, gameStatus, submitGuess]);
 
   // Check letter status (correct, present, absent)
   const checkGuess = (guess: string): GuessResult => {
