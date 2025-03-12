@@ -75,7 +75,7 @@
           "title": "WordMaster",
           "description": "A challenging word guessing game inspired by Wordle.",
           "href": "/playground/games/wordmaster",
-          "category": "games",
+          "category": "Games",
           "isComingSoon": false,
           "content": {
             "title": "WordMaster",
@@ -91,7 +91,7 @@
           "title": "TicTacToe",
           "description": "Classic XOX game with a modern twist. Challenge your friends or play against AI.",
           "href": "/playground/games/tictactoe",
-          "category": "games",
+          "category": "Games",
           "isComingSoon": true
         }
       ]
