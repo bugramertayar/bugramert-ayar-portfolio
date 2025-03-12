@@ -49,7 +49,7 @@ export function About() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mx-auto max-w-2xl lg:text-center">
           <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Senior Frontend Developer with a passion for building modern web applications</p>
           <p className="mt-6 text-lg leading-8 text-foreground/60">
-            With over 5 years of experience in frontend development, I specialize in creating performant and scalable web applications using modern technologies. I'm passionate about clean code, user experience, and staying up-to-date with the latest industry trends.
+            With over 5 years of experience in frontend development, I specialize in creating performant and scalable web applications using modern technologies. I&apos;m passionate about clean code, user experience, and staying up-to-date with the latest industry trends.
           </p>
         </motion.div>
 
