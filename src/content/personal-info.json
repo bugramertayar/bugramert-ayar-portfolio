@@ -11,7 +11,8 @@
   "pages": {
     "home": {
       "description": "Building modern web experiences with Angular, React, Next.js, and TypeScript. Focused on creating scalable and user-centric applications.",
-      "profileImage": "/images/profile.jpeg"
+      "profileImage": "/images/profile.jpeg",
+      "callToAction": "Ready to see what I've been working on? 😊"
     },
     "about": {
       "headline": "Senior Frontend Developer with a passion for building modern web applications",

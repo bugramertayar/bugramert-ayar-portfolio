@@ -13,6 +13,7 @@ interface SharedInfo {
 interface HomePage {
   description: string;
   profileImage: string;
+  callToAction: string;
 }
 
 interface AboutPage {

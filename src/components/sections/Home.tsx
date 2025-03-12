@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getPersonalInfo } from '@/lib/personal-info';
@@ -32,11 +32,24 @@ export function Home() {
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }} className="text-foreground/60 max-w-md text-lg">
               {home.description}
+              <span className="block mt-2 text-primary/80">{home.callToAction}</span>
             </motion.p>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="flex flex-wrap gap-4">
-              <Link href="/about" className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-white shadow transition-colors hover:bg-primary/90">
-                About Me
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="flex flex-wrap items-center gap-6">
+              <Link
+                href="/about"
+                className="group relative inline-flex h-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary to-purple-500 px-8 text-sm font-medium text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02] overflow-hidden">
+                <span className="relative z-10 flex items-center gap-2">
+                  About Me
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+                <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/80 to-purple-500/80 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-60" />
+              </Link>
+              <Link href="/playground" className="group inline-flex h-12 items-center justify-center rounded-xl border-2 border-primary/20 bg-primary/5 px-8 text-sm font-medium text-primary backdrop-blur-sm transition-all duration-300 hover:bg-primary/10 hover:border-primary/30">
+                <span className="flex items-center gap-2">
+                  Explore Projects
+                  <span className="text-xs opacity-80">(Fun Stuff!)</span>
+                </span>
               </Link>
             </motion.div>
 
