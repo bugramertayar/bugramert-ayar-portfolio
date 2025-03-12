@@ -22,7 +22,7 @@ export function Contact() {
     <section className="py-24 sm:py-32">
       <div className="container">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mx-auto max-w-2xl lg:text-center">
-          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Let's Work Together</p>
+          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Let&apos;s Work Together</p>
           <p className="mt-6 text-lg leading-8 text-foreground/60">Feel free to reach out if you&apos;re looking for a developer, have a question, or just want to connect.</p>
         </motion.div>
 
