@@ -1,0 +1,98 @@
+{
+  "shared": {
+    "name": "Buğra Mert Ayar",
+    "title": "Senior Frontend Developer",
+    "socialLinks": {
+      "github": "https://github.com/bugramertayar",
+      "linkedin": "https://www.linkedin.com/in/bugra-mert-ayar/",
+      "email": "bugramertdb@gmail.com"
+    }
+  },
+  "pages": {
+    "home": {
+      "description": "Building modern web experiences with Angular, React, Next.js, and TypeScript. Focused on creating scalable and user-centric applications.",
+      "profileImage": "/images/profile.jpeg"
+    },
+    "about": {
+      "headline": "Senior Frontend Developer with a passion for building modern web applications",
+      "summary": "With over 5 years of experience in frontend development, I specialize in creating performant and scalable web applications using modern technologies. I'm passionate about clean code, user experience, and staying up-to-date with the latest industry trends.",
+      "coreCompetencies": [
+        {
+          "title": "Frontend Development",
+          "description": "Experienced in building modern web applications with Angular, React and Next.js, focusing on performance, accessibility, and user experience."
+        },
+        {
+          "title": "Backend Integration",
+          "description": "Proficient in integrating frontend applications with various backend services using REST APIs and GraphQL."
+        },
+        {
+          "title": "DevOps & Testing",
+          "description": "Strong understanding of CI/CD pipelines, testing methodologies, and deployment strategies using modern tools and practices."
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Senior Frontend Developer",
+          "company": "Logiwa WMS",
+          "period": "May 2023 - Present",
+          "description": [
+            "Led and actively participated in code review meetings, streamlining feedback processes to enhance code quality and maintain coding standards.",
+            "Evaluated merge requests and provided actionable feedback, ensuring alignment with best practices and reducing potential bugs.",
+            "Executed Angular version upgrades and library updates, improving system security and compatibility with the latest front-end technologies.",
+            "Led the implementation of a company-wide design system to enable easier integration between utilizing Next.js, React, Redux, TypeScript, SASS, ESLint, pnpm, Ant Design, Jest enhancing platform functionality and user experience."
+          ]
+        },
+        {
+          "title": "Frontend Developer",
+          "company": "Logiwa WMS",
+          "period": "October 2021 - May 2023",
+          "description": [
+            "Engineered the front-end of a scalable WMS and fulfillment system using Angular (10+), contributing to a seamless user experience and handling increased traffic without performance degradation.",
+            "Implemented advanced Angular features, including routing, RxJs, and micro front-end architecture, to optimize code modularity and improve scalability.",
+            "Adopted Agile methodologies, improving sprint efficiency and team collaboration, reducing project turnaround time.",
+            "Developed cross-browser and mobile-responsive UIs, increasing accessibility and achieving higher user satisfaction.",
+            "Integrated third-party tools and services, enhancing platform functionality and enabling seamless data flows.",
+            "Developed reusable front-end components, reducing code redundancy and accelerating development time across multiple projects.",
+            "Authored test cases utilizing TDD with Jasmine and Karma, ensuring robust code and achieving reduction in bugs."
+          ]
+        },
+        {
+          "title": "Software Developer",
+          "company": "Vendrops Technologies A.S.",
+          "period": "June 2020 - October 2021",
+          "description": [
+            "Designed and developed the front-end for a facility management project from scratch using JavaScript (ES6+), TypeScript, Angular, SCSS, and JQuery, improving operational efficiency by enabling real-time data management",
+            "Developed and optimized the front-end for a task management project with Vue.js, enhancing user interface responsiveness and improving task tracking.",
+            "Implemented controllers and services within an MVC pattern for a system modernization project, increasing code modularity and easing future scalability."
+          ]
+        }
+      ],
+      "skills": ["Angular", "React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "SCSS", "Node.js", "Tailwind CSS", "JQuery", "Agile(Scrum)"]
+    },
+    "contact": {
+      "headline": "Let's Work Together",
+      "description": "Feel free to reach out if you're looking for a developer, have a question, or just want to connect.",
+      "form": {
+        "submitButtonText": "Send Message",
+        "fields": {
+          "name": {
+            "label": "Name",
+            "type": "text"
+          },
+          "email": {
+            "label": "Email",
+            "type": "email"
+          },
+          "message": {
+            "label": "Message",
+            "type": "textarea",
+            "rows": 4
+          }
+        }
+      },
+      "connect": {
+        "title": "Connect with me"
+      }
+    }
+  }
+}

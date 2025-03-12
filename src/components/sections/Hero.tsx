@@ -4,8 +4,14 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getPersonalInfo } from '@/lib/personal-info';
 
 export function Hero() {
+  const {
+    shared,
+    pages: { home }
+  } = getPersonalInfo();
+
   return (
     <section className="relative min-h-screen grid place-items-center">
       <div className="absolute inset-0 -z-10">
@@ -17,15 +23,15 @@ export function Hero() {
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="space-y-8">
             <div className="space-y-4">
               <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl/none">
-                <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">Buğra Mert Ayar</span>
+                <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">{shared.name}</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }} className="text-xl text-foreground/60">
-                Senior Frontend Developer
+                {shared.title}
               </motion.p>
             </div>
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }} className="text-foreground/60 max-w-md text-lg">
-              Building modern web experiences with Angular, React, Next.js, and TypeScript. Focused on creating scalable and user-centric applications.
+              {home.description}
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="flex flex-wrap gap-4">
@@ -35,15 +41,15 @@ export function Hero() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className="flex gap-6">
-              <Link href="https://github.com/bugramertayar" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
+              <Link href={shared.socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
                 <Github className="h-6 w-6" />
                 <span className="sr-only">GitHub</span>
               </Link>
-              <Link href="https://www.linkedin.com/in/bugra-mert-ayar/" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
+              <Link href={shared.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="mailto:bugramertdb@gmail.com" className="text-foreground/60 hover:text-primary transition-colors">
+              <Link href={`mailto:${shared.socialLinks.email}`} className="text-foreground/60 hover:text-primary transition-colors">
                 <Mail className="h-6 w-6" />
                 <span className="sr-only">Email</span>
               </Link>
@@ -53,7 +59,7 @@ export function Hero() {
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="relative aspect-square w-full max-w-md mx-auto lg:mr-0">
             <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-primary to-purple-500 blur-[100px] opacity-20" />
             <div className="relative aspect-square overflow-hidden rounded-3xl border border-[#1f1f1f] shadow-2xl shadow-primary/10">
-              <Image src="/images/profile.jpeg" alt="Buğra Mert Ayar" fill className="object-cover" priority />
+              <Image src={home.profileImage} alt={shared.name} fill className="object-cover" priority />
             </div>
           </motion.div>
         </div>
