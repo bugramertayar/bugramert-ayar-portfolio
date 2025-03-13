@@ -5,9 +5,9 @@ import { Section } from '@/components/shared/Section';
 import { Container } from '@/components/shared/Container';
 import { FadeInUp } from '@/components/shared/Motion';
 import { Card } from '@/components/shared/Card';
-import { Code2, Layers, Rocket, Calendar } from 'lucide-react';
+import { Code2, Layers, Rocket, Calendar, LucideIcon } from 'lucide-react';
 
-const competencyIcons: Record<string, any> = {
+const competencyIcons: Record<string, LucideIcon> = {
   'Frontend Development': Code2,
   'Backend Integration': Layers,
   'DevOps & Testing': Rocket
