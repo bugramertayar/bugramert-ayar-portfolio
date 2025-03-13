@@ -1,12 +1,11 @@
 'use client';
 
 import { motion, HTMLMotionProps } from 'framer-motion';
-import { ComponentProps } from 'react';
 
-type MotionProps = {
+interface MotionProps {
   children: React.ReactNode;
   delay?: number;
-};
+}
 
 export function FadeIn({ children, delay = 0, ...props }: MotionProps & Omit<HTMLMotionProps<'div'>, 'children' | 'initial' | 'animate' | 'transition'>) {
   return (

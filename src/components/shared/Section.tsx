@@ -1,7 +1,6 @@
 'use client';
 
 import { motion, HTMLMotionProps } from 'framer-motion';
-import { ComponentProps } from 'react';
 import { cn } from '@/lib/utils';
 import { Container } from './Container';
 

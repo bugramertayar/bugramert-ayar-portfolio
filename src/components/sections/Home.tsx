@@ -6,7 +6,7 @@ import { getPersonalInfo } from '@/lib/personal-info';
 import { Section } from '@/components/shared/Section';
 import { Container } from '@/components/shared/Container';
 import { Link } from '@/components/shared/Link';
-import { FadeIn, FadeInLeft, FadeInUp, Scale } from '@/components/shared/Motion';
+import { FadeInLeft, FadeInUp, Scale } from '@/components/shared/Motion';
 
 export function Home() {
   const {
