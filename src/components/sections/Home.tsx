@@ -16,10 +16,6 @@ export function Home() {
 
   return (
     <Section className="min-h-screen grid place-items-center" withContainer={false}>
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
-      </div>
       <Container>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <FadeInLeft className="space-y-8">
@@ -70,9 +66,9 @@ export function Home() {
           </FadeInLeft>
 
           <Scale className="relative aspect-square w-full max-w-md mx-auto lg:mr-0">
-            <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-primary to-purple-500 blur-[100px] opacity-20" />
-            <div className="relative aspect-square overflow-hidden rounded-3xl border border-[#1f1f1f] shadow-2xl shadow-primary/10">
-              <Image src={home.profileImage} alt={shared.name} fill className="object-cover" priority />
+            <div className="relative aspect-square overflow-hidden rounded-[2.5rem] bg-gradient-to-tr from-background to-muted p-1">
+              <div className="absolute inset-0 rounded-[2.5rem] ring-1 ring-border/10" />
+              <Image src={home.profileImage} alt={shared.name} fill className="rounded-[2.3rem] object-cover" priority />
             </div>
           </Scale>
         </div>
