@@ -1,10 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import Link from 'next/link';
 import { useState } from 'react';
 import { getPersonalInfo } from '@/lib/personal-info';
+import { Section } from '@/components/shared/Section';
+import { Container } from '@/components/shared/Container';
+import { FadeInUp } from '@/components/shared/Motion';
+import { Link } from '@/components/shared/Link';
+import { Button } from '@/components/shared/Button';
 
 export function Contact() {
   const {
@@ -24,14 +27,14 @@ export function Contact() {
   };
 
   return (
-    <section className="py-24 sm:py-32">
-      <div className="container">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mx-auto max-w-2xl lg:text-center">
+    <Section>
+      <Container>
+        <FadeInUp className="mx-auto max-w-2xl lg:text-center">
           <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">{contact.headline}</p>
           <p className="mt-6 text-lg leading-8 text-foreground/60">{contact.description}</p>
-        </motion.div>
+        </FadeInUp>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="mx-auto mt-16 max-w-2xl sm:mt-20">
+        <FadeInUp delay={0.2} className="mx-auto mt-8 max-w-2xl">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div className="sm:col-span-2">
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -81,35 +84,33 @@ export function Contact() {
                   </div>
                 </div>
                 <div>
-                  <button
-                    type="submit"
-                    className="inline-flex w-full justify-center rounded-md bg-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                  <Button type="submit" variant="primary" className="w-full">
                     {contact.form.submitButtonText}
-                  </button>
+                  </Button>
                 </div>
               </form>
             </div>
           </div>
-        </motion.div>
+        </FadeInUp>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }} className="mx-auto mt-16 max-w-2xl text-center sm:mt-20">
+        <FadeInUp delay={0.4} className="mx-auto mt-8 max-w-2xl text-center sm:mt-8">
           <h3 className="text-lg font-semibold leading-8">{contact.connect.title}</h3>
           <div className="mt-6 flex justify-center gap-6">
-            <Link href={shared.socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
+            <Link href={shared.socialLinks.github} variant="icon" isExternal>
               <Github className="h-6 w-6" />
               <span className="sr-only">GitHub</span>
             </Link>
-            <Link href={shared.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
+            <Link href={shared.socialLinks.linkedin} variant="icon" isExternal>
               <Linkedin className="h-6 w-6" />
               <span className="sr-only">LinkedIn</span>
             </Link>
-            <Link href={`mailto:${shared.socialLinks.email}`} className="text-foreground/60 hover:text-primary transition-colors">
+            <Link href={`mailto:${shared.socialLinks.email}`} variant="icon">
               <Mail className="h-6 w-6" />
               <span className="sr-only">Email</span>
             </Link>
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </FadeInUp>
+      </Container>
+    </Section>
   );
 }
