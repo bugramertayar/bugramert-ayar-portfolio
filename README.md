@@ -7,9 +7,10 @@ A modern, performant, and scalable portfolio website built with Next.js, TypeScr
 - **Modern and Responsive Design**
 
   - Seamless display across all devices
-  - Dark theme support
+  - Elegant dark/light theme switching with smooth transitions
+  - Dynamic color system with HSL variables
   - Customizable color scheme
-  - Smooth animations
+  - Smooth animations and micro-interactions
 
 - **High Performance**
 

@@ -20,7 +20,7 @@ export function ProjectCard({ title, description, href, isComingSoon, category }
         whileTap={{ scale: isComingSoon ? 1 : 0.98 }}
         className={`
           group relative h-full overflow-hidden rounded-2xl border
-          ${isComingSoon ? 'border-[#2a2a2a] bg-[#1a1a1a] opacity-60' : 'border-[#2a2a2a] bg-gradient-to-br from-[#1a1a1a] to-[#151515] hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10'}
+          ${isComingSoon ? 'border-border/40 bg-card/60 opacity-60' : 'border-border/40 bg-card shadow-[0_2px_8px_0px_rgba(0,0,0,0.08)] hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5'}
           p-8 transition-all duration-300
         `}>
         {/* Category Badge */}
@@ -30,7 +30,7 @@ export function ProjectCard({ title, description, href, isComingSoon, category }
           </div>
           <span className="text-sm font-medium text-primary/80">{category}</span>
           {isComingSoon && (
-            <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-[#2a2a2a] px-3 py-1 text-xs font-medium text-foreground/60 ring-1 ring-[#333]/50">
+            <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-secondary/80 px-3 py-1 text-xs font-medium text-muted-foreground ring-1 ring-border/20">
               <Clock className="h-3 w-3" />
               Coming Soon
             </span>
@@ -40,7 +40,7 @@ export function ProjectCard({ title, description, href, isComingSoon, category }
         {/* Content */}
         <div className="relative z-10 space-y-4">
           <h3 className={`text-2xl font-bold tracking-tight ${!isComingSoon && 'group-hover:text-primary'} transition-colors`}>{title}</h3>
-          <p className="text-base leading-relaxed text-foreground/60">{description}</p>
+          <p className="text-base leading-relaxed text-muted-foreground">{description}</p>
 
           {!isComingSoon && (
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="pt-4">
